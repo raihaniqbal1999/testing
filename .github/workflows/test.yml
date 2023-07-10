@@ -47,7 +47,7 @@ on:
        
       apply:
         description: Apply to be done
-        required: false
+        #required: false
         #default: deploy
         type: choice
         options:
