@@ -76,4 +76,4 @@ jobs:
         run: |
              echo "hello"
              echo ${{ inputs.task }}
-             echp ${{ inputs.apply }}
+             echo ${{ inputs.apply }}
