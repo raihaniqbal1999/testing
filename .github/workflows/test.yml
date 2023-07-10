@@ -1,0 +1,76 @@
+name: terraform test
+on:
+ workflow_dispatch:
+    inputs:
+      Terraform_Workspace_Name:
+        description: Terraform Workspaces
+        required: false
+        #default: devsecops-test
+        type: choice
+        options:
+        - devsecops-test
+        - learning
+        - devsecops
+        - cloudops
+        - kip-prod
+        - kip-uat
+        - conn-tech-sbox
+        - tax-client
+        - informatica
+        - icas
+        - culture-snap
+        - pxcube
+        - modelling
+        - fmmicros
+        - chrisastley
+        - ukfmtis
+        - tax-technology
+        - enterprise-bey
+        - digital-uk
+        - ctc-portal
+        - helios
+        - btmobile
+        - pccportal
+        - tax-coe-b2c
+        - fizznunwood
+        - culture-snap-dev
+      
+      task:
+        description: Task to be done 
+        required: false
+        #default: deploy
+        type: choice
+        options:
+        - deploy
+        - deploy_lighthouse
+        - destroy
+       
+      apply:
+        description: Apply to be done
+        required: false
+        #default: deploy
+        type: choice
+        options:
+        - yes 
+        - no
+
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    environment: deploy
+
+    permissions:
+      id-token: write
+      contents: read
+      pull-requests: write
+      issues: write
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Run Echo commands
+        if: ithub.ref == 'refs/heads/main' &&  ${{ inputs.task }} == 'deploy_lighthouse' && ${{ inputs.apply }} == 'yes'
+        run: echo ${{ inputs.task }}
