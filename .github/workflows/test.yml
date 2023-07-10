@@ -73,4 +73,7 @@ jobs:
         
       - name: Run Echo commands
         if: github.ref == 'refs/heads/main' &&  ${{ inputs.task }} == 'deploy_lighthouse' && ${{ inputs.apply }} == 'yes'
-        run: echo ${{ inputs.task }}
+        run: |
+             echo "hello"
+             echo ${{ inputs.task }}
+             echp ${{ inputs.apply }}
