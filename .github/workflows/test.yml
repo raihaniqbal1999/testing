@@ -51,8 +51,8 @@ on:
         #default: deploy
         type: choice
         options:
-        - yes 
-        - no
+        - true
+        - false
 
 jobs:
   deploy:
