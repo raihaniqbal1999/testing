@@ -73,6 +73,7 @@ jobs:
         
       - name: Run Echo commands
         if: ${{ inputs.apply == 'true'  && inputs.task == 'deploy_lighthouse' }} 
-             echo "hello"
-             echo ${{ inputs.task }}
-             echo ${{ inputs.apply }}
+        run: |
+            echo "hello"
+            echo ${{ inputs.task }}
+            echo ${{ inputs.apply }}
