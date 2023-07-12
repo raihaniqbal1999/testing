@@ -47,7 +47,7 @@ on:
        
       Subscrtion_Name:
         description:Subscription_name
-        type: text
+        type: Subscription
         required: false
 
 jobs:
