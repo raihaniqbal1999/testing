@@ -47,7 +47,7 @@ on:
        
       Subscrtion_Name:
         description:Subscription_name
-        required: true
+        required: false
 
 jobs:
   deploy:
