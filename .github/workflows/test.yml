@@ -45,14 +45,9 @@ on:
         - deploy_lighthouse
         - destroy
        
-      apply:
-        description: Apply to be done
-        #required: false
-        #default: deploy
-        type: choice
-        options:
-        - true
-        - false
+      Subscrtion_Name:
+        description:Subscription_name
+        required: true
 
 jobs:
   deploy:
@@ -72,8 +67,9 @@ jobs:
         uses: actions/checkout@v3
         
       - name: Run Echo commands
-        if: ${{ inputs.apply == 'true'  && inputs.task == 'deploy_lighthouse' }} 
+        if: ${{  inputs.task == 'deploy_lighthouse' }} 
         run: |
             echo "hello"
             echo ${{ inputs.task }}
             echo ${{ inputs.apply }}
+            echo ${{ inputs. Subscrtion_Name }}
