@@ -44,7 +44,7 @@ on:
           - destroy
 
       Subscription_Name:
-        description: Task to be done
+        description: Subscription's Name
         required: false
         type: Subscription_Name
 
