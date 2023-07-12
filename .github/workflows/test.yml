@@ -44,7 +44,7 @@ on:
           - destroy
 
       Subscription_Name:
-        description: Subscription's Name
+        description: Subscription Name
         required: false
         type: string
 
@@ -70,5 +70,4 @@ jobs:
         run: |
             echo "hello"
             echo ${{ inputs.task }}
-            echo ${{ inputs.apply }}
-            echo ${{ inputs.Subscrtion_Name }}
+            echo ${{ inputs.Subscription_Name }}
