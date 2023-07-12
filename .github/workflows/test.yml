@@ -71,4 +71,4 @@ jobs:
             echo "hello"
             echo ${{ inputs.task }}
             echo ${{ inputs.apply }}
-            echo ${{ inputs. Subscrtion_Name }}
+            echo ${{ inputs.Subscrtion_Name }}
