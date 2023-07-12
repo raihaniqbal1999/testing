@@ -46,7 +46,7 @@ on:
       Subscription_Name:
         description: Subscription's Name
         required: false
-        type: Subscription_Name
+        type: string
 
 jobs:
   deploy:
