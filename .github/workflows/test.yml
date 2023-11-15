@@ -98,4 +98,5 @@ jobs:
             echo ${{ inputs.Subscription_Name }}
 
      - name: Hi
+       needs: Run Echo commands
        run: echo "hello raihan"
