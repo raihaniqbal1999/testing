@@ -71,11 +71,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Run Echo commands
+      - name: Step 1
         run: |
           echo "hello"
           echo ${{ inputs.task }}
           echo ${{ inputs.Subscription_Name }}
-      - name: Hi
-        needs: Run Echo commands
+          
+      - name: Step 2 
+        needs: Step 1
         run: echo "hello raihan"
