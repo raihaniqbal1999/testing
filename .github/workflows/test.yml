@@ -96,6 +96,6 @@ jobs:
             echo "hello"
             echo ${{ inputs.task }}
             echo ${{ inputs.Subscription_Name }}
-            echo ${{ inputs.Subscription_Id }}
-            echo ${{ inputs.region }}
-            echo ${{ inputs.location }}
+
+     - name: Hi
+       run: echo "hello raihan"
